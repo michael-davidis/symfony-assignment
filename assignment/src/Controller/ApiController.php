@@ -10,8 +10,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class ApiController extends AbstractController  {
 
+    /**
+     * HttpClientInterface variable
+     *
+     * @since 1.0.0
+     * @var HttpClientInterface
+     */
     private $client;
-
+    
     public function __construct(HttpClientInterface $client) {
         $this->client = $client;
     }
